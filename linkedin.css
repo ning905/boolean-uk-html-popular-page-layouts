@@ -14,7 +14,7 @@ main {
     display: grid;
     justify-content: center;
     grid-template-rows: 50px 1fr;
-    grid-gap: 3px;
+    grid-gap: 15px;
     height: 100vh;
     margin: 10px 50px;
 }
@@ -23,7 +23,7 @@ header {
     display: grid;
 
     grid-template-columns: 50px 250px 1fr;
-    grid-gap: 3px;
+    grid-gap: 5px;
 }
 
 .search-bar {
@@ -44,7 +44,7 @@ main {
         "left-menu start-post right-menu" 100px
         "left-menu post-section right-menu" 1fr /
         150px 500px 150px;
-    grid-gap: 3px;
+    grid-gap: 10px;
 }
 
 
