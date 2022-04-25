@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    border-radius: 3px;
+    width: 90%;
+}
+
+/* Header section  */
+header {
+    grid-area: header;
+    background-color: darkcyan;
+
+    display: grid;
+    grid-template-columns: 50px 150px 1fr 250px;
+}
+
+.menu-bar {
+    display: grid;
+    place-items: center;
+    width: 80%;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+}
+
+.search-bar {
+    background-color: burlywood;
+}
+
+/* Left Menu */
+.left-menu {
+    grid-area: left-menu;
+    background-color: khaki;
+
+    display: grid;
+    grid-template-rows: 60px 1fr 60px 150px;
+}
+
+.left-menu .boxes {
+    background-color: cadetblue;
+
+    display: grid;
+}
+
+.left-menu .meet {
+    background-color: rgb(180, 150, 244);
+}
+
+.left-menu .chat {
+    background-color:cornflowerblue;
+
+    display: grid;
+    grid-template-rows: 1fr 25px;
+}
+
+.left-menu .chat .chat-menu {
+    background-color: aquamarine;
+}
+
+
+.mail {
+    grid-area: mail;
+    background-color: darkgray;
+}
+
+.right-menu {
+    grid-area: right-menu;
+    background-color:darkkhaki;
+
+    display: grid;
+    grid-template-columns: 225px 25px;
+}
+
+.right-menu .quick-setting {
+    display: grid;
+
+    grid-template-rows: 60px 100px 60px 1fr;
+}
+
+.density {
+    background-color: indianred;
+}
+
+.inbox-type {
+    background-color: limegreen;
+}
+
+.right-menu .right-bar {
+    background-color: coral;
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.container {
+    padding: 10px;
+
+    display: grid;
+    height: 100vh;
+
+    grid-template: 
+    "header header header" 50px
+    "left-menu mail right-menu" 1fr /
+    200px 1fr 250px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template: 
+        "header header" 50px
+        "left-menu mail" 1fr /
+        200px 1fr;
+        }    
+
+    .right-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+        grid-template: 
+        "header header" 50px
+        "left-menu mail" 1fr /
+        50px 1fr;
+        }    
+}
+
+
